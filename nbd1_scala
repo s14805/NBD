@@ -1,0 +1,110 @@
+import scala.language.postfixOps
+import scala.annotation.tailrec
+go()
+
+def go() {
+
+  val z = List(
+    "Poniedzialek",
+    "Wtorek",
+    "Sroda",
+    "Czwartek",
+    "Piatek",
+    "Sobota",
+    "Niedziela"
+  )
+  
+  //zadanie 1
+  var str = " "
+  for (a <- z) {
+    str = str + a + ","
+  }
+  println(str)
+  str = " "
+  for (a <- z if a.startsWith("P")) {
+    str = str + a + ","
+  }
+  println(str)
+  var i = 0
+  str = " "
+  while (i < z.size) {
+    str = str + z(i) + ","
+    i += 1
+  }
+  println(str)
+
+  //zadanie 2
+  def f1(n: List[String]): String = {
+    if (n.size > 0) n(0) + "," + f1(n.tail)
+    else ""
+  }
+  println(f1(z))
+
+  def f2(n: List[String]): String = {
+    if (n.size > 0) f2(n.tail) + "," + n(0)
+    else ""
+  }
+  println(f2(z))
+
+  // zadanie 3
+  @tailrec
+  def f3(n: List[String], result: String): String = {
+    if (n.size == 0) result
+    else f3(n.tail, result + "," + n(0))
+
+  }
+  println(f3(z, ""))
+  
+  //zadanie 4
+  println(z.foldLeft("")(_ + _ + ","))
+  println(z.foldRight("")(_ + "," + _))
+  println(z.filter(_.startsWith("P")).foldLeft("")(_ + _ + ","))
+  
+  //zadanie 5
+  val products = Map("zupa" -> 12, "drugie" -> 25, "deser" -> 10)
+  println(products.map { case (a, b) => (a, b * 0.9) })
+
+  // zadanie 6
+  def printit(a: (Any,Any,Any)) {
+    print(a._1)
+    print(a._2)
+    print(a._3)
+    println("")
+  }
+  printit(("hello ", 1, " d"))
+
+  //zadanie 7
+  def price(key: Option[Int]) = key match {
+    case Some(s) => "cena dania: " + s
+    case None    => "brak dania"
+  }
+  println(price(products.get("zupa")))
+  println(price(products.get("zuppa")))
+
+  //zadanie 8
+
+  val we = List(1, 2, 3, 0, 0, 4, 5, 6, 0, 7, 8, 0, 0, 0, 9, 0)
+  @tailrec
+  def clean(list: List[Int], result: List[Int]): List[Int] = {
+    if (list.size == 0) result
+    else {
+      if (list(0) == 0) clean(list.tail, result)
+      else clean(list.tail, result ::: List(list(0)))
+
+    }
+  }
+  println(clean(we, List()))
+  //zadanie 9
+  def plusone(x: List[Int]): List[Int] = {
+    x.map(a => a + 1)
+  }
+  println(plusone(we))
+
+  //zadanie 10
+  val we2 = List(1, 3, -5, 6.4, 4, -4, 6, 0, -9.9, 18)
+  def abs(x: List[Double]): List[Any] = {
+    x filter (_ >= -5) filter (_ <= 12) map (_ abs)
+  }
+
+  println(abs(we2))
+}
