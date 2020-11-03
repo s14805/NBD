@@ -1,18 +1,83 @@
- import scala.language.postfixOps
- import scala.annotation.tailrec
- go()
+class KontoBankowe(st: Int){
+  var stankonta: Int=st ;
+  def this(){
+    this(0)
+  }
+  def wplata(in : Int){
+    stankonta=(stankonta+in)
+  }
+  def wyplata(out : Int){
+    stankonta=(stankonta-out)
+  }
+}
+object HelloWorld{
+  def main(args: Array[String]) {
+    println(za("Wtorek"))
+    val c = new KontoBankowe()
+    var x = new KontoBankowe(20)
+    println(x.stankonta)
+    x.wplata(100)
+    println(x.stankonta)
+    var o1 = new Osoba("zuzia","kowalska")
+    var o2 = new Osoba("zosia","kowalska")
+    var o3 = new Osoba("piotr","kowal")
+    println(sayHello(o1))
+    println(sayHello(o2))
+    println(sayHello(o3))
 
- def go() {
+    println(f2(4,f1: Int => Int))
 
-   //zadanie 1
-  
-   def f1(n: String): String = {
-     n match{
-       case "Poniedzialek"|"Wtorek"|"Sroda"|"Czwartek"|"Piatek"=> "Praca"
-       case "Sobota"|"Niedziela" => "Weekend"
-       case other => "Nie ma takiego dnia"
-     }
-   }
-   
-   print(f1("Wtorek"))
- }
+  }
+  def za(n: String): String = {
+    n match{
+      case "Poniedzialek"|"Wtorek"|"Sroda"|"Czwartek"|"Piatek"=> "Praca"
+      case "Sobota"|"Niedziela" => "Weekend"
+      case other => "Nie ma takiego dnia"
+    }
+  }
+  def sayHello(n :Osoba): String={
+    (n.imie,n.nazwisko)  match{
+    case ("zuzia",_)=> "hello"
+    case ("zosia",_)=> "hola"
+    case (_,"kowal")=> "czesc"
+    case _ => "dziendobry"
+  }}
+  def f1(n : Int):Int={3*n}
+  def f2(n : Int,f1 : (Int) => Int):Int={f1(n)}
+
+  var osob = new Osoba2("ola","kania",900) with Pracownik
+  //osob._pensja=60000
+  println("Podatek pracownik "+osob.podatek)
+  var nauczyciel = new Osoba2("ola","kania",900) with Nauczyciel
+  println("Podatek nauczyciel "+nauczyciel .podatek)
+  var student = new Osoba2("ola","kania",900) with Student
+  println("Podatek student "+student.podatek)
+  var stpr = new Osoba2("ola","kania",900) with Student with Pracownik
+  println("Podatek student pracownik "+stpr.podatek)
+  var prst = new Osoba2("ola","kania",900) with Pracownik with Student
+  println("Podatek pracownik student "+prst.podatek)
+}
+
+ class Osoba(im : String , nazw : String){
+  var imie: String=im ;
+  var nazwisko: String=nazw ;
+}
+trait Student extends Osoba2{
+  override def podatek: Double = 0
+  }
+trait Nauczyciel extends Pracownik {
+  // przesłaniać własność podatek – 10% pensji.
+  override def podatek = _pensja*0.1
+}
+
+trait Pracownik extends Osoba2{
+  var _pensja: Double = 6000
+  def pensja: Double = _pensja
+  def pensja_=(x : Double){_pensja=x}
+  override def podatek: Double = _pensja*0.2
+}
+class Osoba2 (im :String,nazw : String, pod : Double){
+var imie : String =im
+  var nazwisko : String =nazw
+  def podatek : Double  =pod
+}
