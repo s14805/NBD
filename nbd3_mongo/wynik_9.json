@@ -1,0 +1,11 @@
+
+MongoDB server version: 4.4.1
+uncaught exception: TypeError: db.people.updateanyM is not a function :
+@zapytanie_9.js:1:11
+failed to load: zapytanie_9.js
+exiting with code -3
+MongoDB shell version v4.4.1
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("656ca035-592d-42e2-8148-a9d2fbd18985") }
+MongoDB server version: 4.4.1
+{ "acknowledged" : true, "matchedCount" : 59, "modifiedCount" : 59 }
