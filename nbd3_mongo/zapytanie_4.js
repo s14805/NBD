@@ -1,1 +1,1 @@
- printjson(db.people.find({"weight" : {$gte : "68" },"weight" : {$lt : "71.5"}}).toArray())
+ printjson(db.people.find({$and :[{"weight" : {$gte : "68" }},{"weight" : {$lt : "71.5"}}]}).toArray())
