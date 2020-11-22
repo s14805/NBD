@@ -1,0 +1,608 @@
+MongoDB shell version v4.4.1
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e68d6a53-d198-481f-a525-cede995a9c5d") }
+MongoDB server version: 4.4.1
+{
+	"_batch" : [
+		{
+			"_id" : "GBP",
+			"total" : 6149.19,
+			"average" : 6149.19
+		},
+		{
+			"_id" : "KZT",
+			"total" : 3788.95,
+			"average" : 3788.95
+		},
+		{
+			"_id" : "NIO",
+			"total" : 9971.28,
+			"average" : 4985.64
+		},
+		{
+			"_id" : "JPY",
+			"total" : 60944.74,
+			"average" : 5078.7283333333335
+		},
+		{
+			"_id" : "VEF",
+			"total" : 8333.28,
+			"average" : 4166.64
+		},
+		{
+			"_id" : "SEK",
+			"total" : 70840.19,
+			"average" : 5060.013571428572
+		},
+		{
+			"_id" : "CNY",
+			"total" : 470700.38,
+			"average" : 4954.740842105263
+		},
+		{
+			"_id" : "THB",
+			"total" : 23021.96,
+			"average" : 4604.392
+		},
+		{
+			"_id" : "AMD",
+			"total" : 24609.33,
+			"average" : 4921.866
+		},
+		{
+			"_id" : "PKR",
+			"total" : 18938,
+			"average" : 4734.5
+		},
+		{
+			"_id" : "EGP",
+			"total" : 5579.3,
+			"average" : 5579.3
+		},
+		{
+			"_id" : "AFN",
+			"total" : 16755.49,
+			"average" : 5585.163333333334
+		},
+		{
+			"_id" : "RWF",
+			"total" : 4632.88,
+			"average" : 4632.88
+		},
+		{
+			"_id" : "ZMW",
+			"total" : 5569.56,
+			"average" : 5569.56
+		},
+		{
+			"_id" : "MMK",
+			"total" : 4629.42,
+			"average" : 4629.42
+		},
+		{
+			"_id" : "MWK",
+			"total" : 3574.42,
+			"average" : 3574.42
+		},
+		{
+			"_id" : "KRW",
+			"total" : 13379.82,
+			"average" : 6689.91
+		},
+		{
+			"_id" : "MNT",
+			"total" : 21715.61,
+			"average" : 5428.9025
+		},
+		{
+			"_id" : "HNL",
+			"total" : 16514.59,
+			"average" : 5504.863333333334
+		},
+		{
+			"_id" : "NPR",
+			"total" : 5792.26,
+			"average" : 5792.26
+		},
+		{
+			"_id" : "PHP",
+			"total" : 118606.28,
+			"average" : 4941.928333333333
+		},
+		{
+			"_id" : "LYD",
+			"total" : 8764.99,
+			"average" : 4382.495
+		},
+		{
+			"_id" : "CAD",
+			"total" : 58375.6,
+			"average" : 5306.872727272727
+		},
+		{
+			"_id" : "HRK",
+			"total" : 24354.82,
+			"average" : 4870.964
+		},
+		{
+			"_id" : "UZS",
+			"total" : 3573.03,
+			"average" : 3573.03
+		},
+		{
+			"_id" : "PEN",
+			"total" : 18644.94,
+			"average" : 4661.235
+		},
+		{
+			"_id" : "MXN",
+			"total" : 50229,
+			"average" : 5022.9
+		},
+		{
+			"_id" : "ILS",
+			"total" : 16295.49,
+			"average" : 5431.83
+		},
+		{
+			"_id" : "DOP",
+			"total" : 20674.739999999998,
+			"average" : 5168.6849999999995
+		},
+		{
+			"_id" : "CLP",
+			"total" : 21008.95,
+			"average" : 5252.2375
+		},
+		{
+			"_id" : "NGN",
+			"total" : 24946.23,
+			"average" : 4157.705
+		},
+		{
+			"_id" : "XPF",
+			"total" : 4759.07,
+			"average" : 4759.07
+		},
+		{
+			"_id" : "MGA",
+			"total" : 14560.99,
+			"average" : 4853.663333333333
+		},
+		{
+			"_id" : "BYR",
+			"total" : 5095.79,
+			"average" : 5095.79
+		},
+		{
+			"_id" : "BRL",
+			"total" : 49632.020000000004,
+			"average" : 4512.001818181819
+		},
+		{
+			"_id" : "COP",
+			"total" : 19746.73,
+			"average" : 4936.6825
+		},
+		{
+			"_id" : "RUB",
+			"total" : 119749.15,
+			"average" : 4989.547916666666
+		},
+		{
+			"_id" : "PYG",
+			"total" : 4874.69,
+			"average" : 4874.69
+		},
+		{
+			"_id" : "BGN",
+			"total" : 21200.88,
+			"average" : 5300.22
+		},
+		{
+			"_id" : "CZK",
+			"total" : 37156.42,
+			"average" : 4644.5525
+		},
+		{
+			"_id" : "CUP",
+			"total" : 15017.34,
+			"average" : 5005.78
+		},
+		{
+			"_id" : "ZAR",
+			"total" : 11790.92,
+			"average" : 3930.306666666667
+		},
+		{
+			"_id" : "XOF",
+			"total" : 17882.05,
+			"average" : 5960.683333333333
+		},
+		{
+			"_id" : "IQD",
+			"total" : 4269.39,
+			"average" : 4269.39
+		},
+		{
+			"_id" : "RSD",
+			"total" : 4276.56,
+			"average" : 4276.56
+		},
+		{
+			"_id" : "UAH",
+			"total" : 40471.840000000004,
+			"average" : 5058.9800000000005
+		},
+		{
+			"_id" : "XAF",
+			"total" : 14094.66,
+			"average" : 4698.22
+		},
+		{
+			"_id" : "ALL",
+			"total" : 3325.48,
+			"average" : 3325.48
+		},
+		{
+			"_id" : "YER",
+			"total" : 13712.5,
+			"average" : 4570.833333333333
+		},
+		{
+			"_id" : "GTQ",
+			"total" : 5806.3,
+			"average" : 5806.3
+		},
+		{
+			"_id" : "KYD",
+			"total" : 3760.89,
+			"average" : 3760.89
+		},
+		{
+			"_id" : "ARS",
+			"total" : 23242,
+			"average" : 4648.4
+		},
+		{
+			"_id" : "NZD",
+			"total" : 5328.46,
+			"average" : 5328.46
+		},
+		{
+			"_id" : "MKD",
+			"total" : 3835.05,
+			"average" : 3835.05
+		},
+		{
+			"_id" : "MYR",
+			"total" : 4781.12,
+			"average" : 4781.12
+		},
+		{
+			"_id" : "ZWL",
+			"total" : 5792.17,
+			"average" : 5792.17
+		},
+		{
+			"_id" : "MAD",
+			"total" : 3818.85,
+			"average" : 3818.85
+		},
+		{
+			"_id" : "NOK",
+			"total" : 4773.66,
+			"average" : 4773.66
+		},
+		{
+			"_id" : "EUR",
+			"total" : 245091.47,
+			"average" : 4901.8294
+		},
+		{
+			"_id" : "VND",
+			"total" : 36160.26,
+			"average" : 4520.0325
+		},
+		{
+			"_id" : "IDR",
+			"total" : 323922.59,
+			"average" : 4907.918030303031
+		},
+		{
+			"_id" : "CDF",
+			"total" : 12228.8,
+			"average" : 6114.4
+		},
+		{
+			"_id" : "TJS",
+			"total" : 4087.71,
+			"average" : 4087.71
+		},
+		{
+			"_id" : "SRD",
+			"total" : 5286.68,
+			"average" : 5286.68
+		},
+		{
+			"_id" : "BWP",
+			"total" : 4076.29,
+			"average" : 4076.29
+		},
+		{
+			"_id" : "PLN",
+			"total" : 93767.78,
+			"average" : 4465.132380952381
+		},
+		{
+			"_id" : "USD",
+			"total" : 74680.98,
+			"average" : 4978.732
+		},
+		{
+			"_id" : "IRR",
+			"total" : 26504.239999999998,
+			"average" : 4417.373333333333
+		},
+		{
+			"_id" : "TZS",
+			"total" : 7052.370000000001,
+			"average" : 3526.1850000000004
+		},
+		{
+			"_id" : "BOB",
+			"total" : 5263.3,
+			"average" : 5263.3
+		},
+		{
+			"_id" : "ISK",
+			"total" : 4316.41,
+			"average" : 4316.41
+		},
+		{
+			"_id" : "VUV",
+			"total" : 6418.27,
+			"average" : 6418.27
+		},
+		{
+			"_id" : "ETB",
+			"total" : 5436.11,
+			"average" : 5436.11
+		}
+	],
+	"_useReadCommands" : true,
+	"_cursorid" : NumberLong(0),
+	"_batchSize" : undefined,
+	"_maxAwaitTimeMS" : undefined,
+	"_txnNumber" : undefined,
+	"_ns" : "nbd.people",
+	"_db" : nbd,
+	"_collName" : "people",
+	"_cursorHandle" : {
+		
+	},
+	"isClosed" : function() {
+    if (this._useReadCommands) {
+        return bsonWoCompare({_: this._cursorid}, {_: NumberLong(0)}) === 0;
+    }
+    return this._cursor.isClosed();
+},
+	"isExhausted" : function() {
+    return this.isClosed() && this.objsLeftInBatch() === 0;
+},
+	"close" : function() {
+    if (!this._useReadCommands) {
+        this._cursor.close();
+    } else if (bsonWoCompare({_: this._cursorid}, {_: NumberLong(0)}) !== 0) {
+        var killCursorCmd = {
+            killCursors: this._collName,
+            cursors: [this._cursorid],
+        };
+        var cmdRes = this._db.runCommand(killCursorCmd);
+        if (cmdRes.ok != 1) {
+            throw _getErrorWithCode(cmdRes, "killCursors command failed: " + tojson(cmdRes));
+        }
+
+        this._cursorHandle.zeroCursorId();
+        this._cursorid = NumberLong(0);
+    }
+},
+	"_updatePostBatchResumeToken" : function(cursorObj) {
+    if (cursorObj.postBatchResumeToken) {
+        this._postBatchResumeToken = cursorObj.postBatchResumeToken;
+        if ((cursorObj.firstBatch || cursorObj.nextBatch).length === 0) {
+            this._resumeToken = this._postBatchResumeToken;
+        }
+        this._isChangeStream = true;
+    }
+},
+	"_runGetMoreCommand" : function() {
+    // Construct the getMore command.
+    var getMoreCmd = {getMore: this._cursorid, collection: this._collName};
+
+    if (this._batchSize) {
+        getMoreCmd["batchSize"] = this._batchSize;
+    }
+
+    // maxAwaitTimeMS is only supported when using read commands.
+    if (this._maxAwaitTimeMS) {
+        getMoreCmd.maxTimeMS = this._maxAwaitTimeMS;
+    }
+
+    if (this._txnNumber) {
+        getMoreCmd.txnNumber = NumberLong(this._txnNumber);
+        getMoreCmd.autocommit = false;
+    }
+
+    // Deliver the getMore command, and check for errors in the response.
+    var cmdRes = this._db.runCommand(getMoreCmd);
+    assert.commandWorked(cmdRes, () => "getMore command failed: " + tojson(cmdRes));
+
+    if (this._ns !== cmdRes.cursor.ns) {
+        throw Error("unexpected collection in getMore response: " + this._ns +
+                    " != " + cmdRes.cursor.ns);
+    }
+
+    if (!cmdRes.cursor.id.compare(NumberLong("0"))) {
+        this._cursorHandle.zeroCursorId();
+        this._cursorid = NumberLong("0");
+    } else if (this._cursorid.compare(cmdRes.cursor.id)) {
+        throw Error("unexpected cursor id: " + this._cursorid.toString() +
+                    " != " + cmdRes.cursor.id.toString());
+    }
+
+    // If the command result represents a change stream cursor, update our postBatchResumeToken.
+    this._updatePostBatchResumeToken(cmdRes.cursor);
+
+    // Successfully retrieved the next batch.
+    this._batch = cmdRes.cursor.nextBatch.reverse();
+},
+	"_hasNextUsingCommands" : function() {
+    assert(this._useReadCommands);
+
+    if (!this._batch.length) {
+        if (!this._cursorid.compare(NumberLong("0"))) {
+            return false;
+        }
+
+        this._runGetMoreCommand();
+    }
+
+    return this._batch.length > 0;
+},
+	"hasNext" : function() {
+    if (this._useReadCommands) {
+        return this._hasNextUsingCommands();
+    }
+
+    return this._batch.length || this._cursor.hasNext();
+},
+	"next" : function() {
+    if (this._batch.length) {
+        // Pop the next result off the batch.
+        const nextDoc = this._batch.pop();
+        if (this._isChangeStream) {
+            // If this is the last result in the batch, the postBatchResumeToken becomes the current
+            // resume token for the cursor. Otherwise, the resume token is the _id of 'nextDoc'.
+            this._resumeToken = (this._batch.length ? nextDoc._id : this._postBatchResumeToken);
+        }
+        return nextDoc;
+    } else if (this._useReadCommands) {
+        // Have to call hasNext() here, as this is where we may issue a getMore in order to retrieve
+        // the next batch of results.
+        if (!this.hasNext())
+            throw Error("error hasNext: false");
+        return this._batch.pop();
+    } else {
+        if (!this._cursor.hasNext())
+            throw Error("error hasNext: false");
+
+        var ret = this._cursor.next();
+        if (ret.$err)
+            throw _getErrorWithCode(ret, "error: " + tojson(ret));
+        return ret;
+    }
+},
+	"objsLeftInBatch" : function() {
+    if (this._useReadCommands) {
+        return this._batch.length;
+    } else if (this._batch.length) {
+        return this._batch.length;
+    } else {
+        return this._cursor.objsLeftInBatch();
+    }
+},
+	"getId" : function() {
+    return this._cursorid;
+},
+	"getResumeToken" : function() {
+    // Return the most recent recorded resume token, if such a token exists.
+    return this._resumeToken;
+},
+	"help" : function() {
+    // This is the same as the "Cursor Methods" section of DBQuery.help().
+    print("\nCursor methods");
+    print("\t.toArray() - iterates through docs and returns an array of the results");
+    print("\t.forEach( func )");
+    print("\t.map( func )");
+    print("\t.hasNext()");
+    print("\t.next()");
+    print(
+        "\t.objsLeftInBatch() - returns count of docs left in current batch (when exhausted, a new getMore will be issued)");
+    print("\t.itcount() - iterates through documents and counts them");
+    print(
+        "\t.getResumeToken() - for a change stream cursor, obtains the most recent valid resume token, if it exists.");
+    print("\t.pretty() - pretty print each document, possibly over multiple lines");
+    print("\t.close()");
+},
+	"toArray" : function() {
+    if (this._arr)
+        return this._arr;
+
+    var a = [];
+    while (this.hasNext())
+        a.push(this.next());
+    this._arr = a;
+    return a;
+},
+	"forEach" : function(func) {
+    while (this.hasNext())
+        func(this.next());
+},
+	"map" : function(func) {
+    var a = [];
+    while (this.hasNext())
+        a.push(func(this.next()));
+    return a;
+},
+	"itcount" : function() {
+    var num = 0;
+
+    // Track how many bytes we've used this cursor to iterate iterated.  This function can be called
+    // with some very large cursors.  SpiderMonkey appears happy to allow these objects to
+    // accumulate, so regular gc() avoids an overly large memory footprint.
+    //
+    // TODO: migrate this function into c++
+    var bytesSinceGC = 0;
+
+    while (this.hasNext()) {
+        num++;
+        var nextDoc = this.next();
+        bytesSinceGC += Object.bsonsize(nextDoc);
+
+        // Garbage collect every 10 MB.
+        if (bytesSinceGC > (10 * 1024 * 1024)) {
+            bytesSinceGC = 0;
+            gc();
+        }
+    }
+    return num;
+},
+	"shellPrint" : function() {
+    try {
+        var start = new Date().getTime();
+        var n = 0;
+        while (this.hasNext() && n < DBQuery.shellBatchSize) {
+            var s = this._prettyShell ? tojson(this.next()) : tojson(this.next(), "", true);
+            print(s);
+            n++;
+        }
+        if (typeof _verboseShell !== 'undefined' && _verboseShell) {
+            var time = new Date().getTime() - start;
+            print("Fetched " + n + " record(s) in " + time + "ms");
+        }
+        if (this.hasNext()) {
+            print("Type \"it\" for more");
+            ___it___ = this;
+        } else {
+            ___it___ = null;
+        }
+    } catch (e) {
+        print(e);
+    }
+},
+	"pretty" : function() {
+    this._prettyShell = true;
+    return this;
+}
+}
