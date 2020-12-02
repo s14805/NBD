@@ -1,0 +1,122 @@
+﻿[
+  {
+    "bb": {
+"identity": 181,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "IAH"
+      }
+    },
+    "suma": 1070.25
+  },
+  {
+    "bb": {
+"identity": 186,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "ORD"
+      }
+    },
+    "suma": 2733.75
+  },
+  {
+    "bb": {
+"identity": 190,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "SFO"
+      }
+    },
+    "suma": 266.25
+  },
+  {
+    "bb": {
+"identity": 195,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "BOS"
+      }
+    },
+    "suma": 2025.0
+  },
+  {
+    "bb": {
+"identity": 204,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "LAS"
+      }
+    },
+    "suma": 186.75
+  },
+  {
+    "bb": {
+"identity": 202,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "HNL"
+      }
+    },
+    "suma": 1986.75
+  },
+  {
+    "bb": {
+"identity": 198,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "SLC"
+      }
+    },
+    "suma": 1861.5
+  },
+  {
+    "bb": {
+"identity": 220,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "FAT"
+      }
+    },
+    "suma": 1333.5
+  },
+  {
+    "bb": {
+"identity": 221,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "TUS"
+      }
+    },
+    "suma": 1420.5
+  },
+  {
+    "bb": {
+"identity": 192,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "SMF"
+      }
+    },
+    "suma": 1181.25
+  }
+]

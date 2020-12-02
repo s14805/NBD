@@ -1,0 +1,40 @@
+
+
+
+----------------    Część 1 – Wycieczki górskie
+
+#1. Znajdź trasy którymi można dostać się z Darjeeling na Sandakphu, mające najmniejszą ilość etapów
+MATCH(n:town{name : 'Darjeeling'}),(m:peak{name: 'Sandakphu'}) with n,m match path=ShortestPath((n)-[*..5]-(m)) return path
+
+#2. Znajdź mające najmniej etapów trasy którymi można dostać się z Darjeeling na Sandakphu i które mogą być wykorzystywane zimą
+MATCH(n:town{name : 'Darjeeling'}),(m:peak{name: 'Sandakphu'}) with n,m match path=ShortestPath((n)-[r *..5]-(m))  with  collect(r) as list WHERE EXISTS {
+  match (a)-[r]-(b) where r.winter='true'
+} return list
+
+
+#3. Uszereguj trasy którymi można dostać się z Darjeeling na Sandakphu według dystansu
+MATCH(n:town{name : 'Darjeeling'}),(m:peak{name: 'Sandakphu'}) with n,m match path=ShortestPath((n)-[r *..5]-(m))  UNWIND  r as list return list order by list.distance
+ Znajdź wszystkie miejsca do których można dotrzeć 
+przy pomocy roweru (twowheeler) z Darjeeling latem
+match (a:town{name : 'Darjeeling'})-[r:twowheeler{summer : 'true'}]-(b)  return a,b
+
+Część 2 – Połączenia lotnicze
+
+Zaimportuj dane uruchamiając skrypt task3.cypher. Napisz następujące zapytania:
+
+4. Uszereguj porty lotnicze według ilości rozpoczynających się w nich lotów
+match(n:Airport)-[r:ORIGIN]-(m) with n,count(r) as out_flights return n,out_flights order by out_flights descending
+
+5. Znajdź wszystkie porty lotnicze, do których da się dolecieć (bezpośrednio lub z przesiadkami) z Los Angeles (LAX) wydając mniej niż 3000
+
+match(n:Flight)-[r]-(m:Ticket) return n,min(m.price)
+
+6. Uszereguj połączenia, którymi można dotrzeć z Los Angeles (LAX) do Dayton (DAY) według ceny biletów
+
+7. Znajdź najtańsze połączenie z Los Angeles (LAX) do Dayton (DAY)
+
+8. Znajdź najtańsze połączenie z Los Angeles (LAX) do Dayton (DAY) w klasie biznes
+
+9. Uszereguj linie lotnicze według ilości miast, pomiędzy którymi oferują połączenia (unikalnych miast biorących udział w relacjach :ORIGIN i :DESTINATION węzłów typu Flight obsługiwanych przez daną linię)
+
+10. Znajdź najtańszą trasę łączącą 3 różne porty lotnicz

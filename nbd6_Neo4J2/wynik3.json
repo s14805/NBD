@@ -1,0 +1,44 @@
+﻿[
+  {
+    "list": {
+"identity": 254,
+"start": 171,
+"end": 172,
+"type": "trek",
+"properties": {
+"name": "BhikeBhanja-Sandakphu",
+"winter": "true",
+"distance": 4,
+"summer": "true"
+      }
+    }
+  },
+  {
+    "list": {
+"identity": 250,
+"start": 170,
+"end": 169,
+"type": "PublicTransport",
+"properties": {
+"name": "Darjeeling-Rimbik",
+"winter": "true",
+"distance": 15,
+"summer": "true"
+      }
+    }
+  },
+  {
+    "list": {
+"identity": 253,
+"start": 169,
+"end": 171,
+"type": "trek",
+"properties": {
+"name": "Rimbik-BhikeBhanja",
+"winter": "true",
+"distance": 18,
+"summer": "true"
+      }
+    }
+  }
+]
