@@ -1,0 +1,37 @@
+1.
+curl -XPUT -H "Content-Type:application/json" -d '{"imie" : "Julia" , "nazwisko" : "Kowalska" , "numer_w_dzienniku" :  4 ,   "klasa" : "2A"}'  http://localhost:8098/buckets/s14805/keys/1
+curl -XPUT -H "Content-Type:application/json" -d '{"imie" : "Zuzia" , "nazwisko" : "Kowal", "numer_w_dzienniku" :  4 ,   "klasa" : "3A"}'  http://localhost:8098/buckets/s14805/keys/2
+curl -XPUT -H "Content-Type:application/json" -d '{"imie" : "Aleks" , "nazwisko" : "Zawadzki" , "numer_w_dzienniku" :  5 ,   "klasa" : "3A"}'  http://localhost:8098/buckets/s14805/keys/3
+curl -XPUT -H "Content-Type:application/json" -d '{"imie" : "Zbigniew" , "nazwisko" : "Poniatowski" , "numer_w_dzienniku" :  6 ,   "klasa" : "3A"}'  http://localhost:8098/buckets/s14805/keys/4
+curl -XPUT -H "Content-Type:application/json" -d '{"imie" : "Ola" , "nazwisko" : "Seka", "numer_w_dzienniku" :  12,   "klasa" : "1B"}'  http://localhost:8098/buckets/s14805/keys/5
+
+2.
+curl  -i http://localhost:8098/buckets/s14805/keys/1
+
+3.dodanie wieku
+curl -XPUT -H "Content-Type:application/json"  -d '{"imie" : "Ola" , "nazwisko" : "Seka", "numer_w_dzienniku" :  12,   "klasa" : "1B", "wiek" : 12}'  http://localhost:8098/buckets/s14805/keys/5
+
+4. usuniecie klasy
+curl -XPUT -H "Content-Type:application/json" -d '{"imie" : "Aleks" , "nazwisko" : "Zawadzki" , "numer_w_dzienniku" :  5 }'  http://localhost:8098/buckets/s14805/keys/3
+
+5.zmiana imienia
+curl -XPUT -H "Content-Type:application/json" -d '{"imie" : "Zbigniewa" , "nazwisko" : "Poniatowski" , "numer_w_dzienniku" :  6 ,   "klasa" : "3A"}'  http://localhost:8098/buckets/s14805/keys/4
+
+6.
+curl -XDELETE http://localhost:8098/buckets/s14805/keys/5
+
+7.
+curl -i http://localhost:8098/buckets/s14805/keys/5
+
+8.
+curl -XPOST -H "Content-Type:application/json" -d '{"imie" : "Kasia"}'  http://localhost:8098/buckets/s14805/keys
+
+9.
+
+curl  -i http://localhost:8098/buckets/s14805/keys?keys=true
+curl -XPUT -H "Content-Type:application/json" -H "x-riak-index-new_bin : randomKey" -d '{"imie" : "Kasia" }'  http://localhost:8098/buckets/s14805/keys/L5nSUAbyyZ8okL2TSjcltAkMlxC
+
+
+10.
+
+curl -XDELETE http://localhost:8098/buckets/s14805/index/new_bin/randomKey
