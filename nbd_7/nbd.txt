@@ -29,9 +29,10 @@ curl -XPOST -H "Content-Type:application/json" -d '{"imie" : "Kasia"}'  http://l
 9.
 
 curl  -i http://localhost:8098/buckets/s14805/keys?keys=true
-curl -XPUT -H "Content-Type:application/json" -H "x-riak-index-new_bin : randomKey" -d '{"imie" : "Kasia" }'  http://localhost:8098/buckets/s14805/keys/L5nSUAbyyZ8okL2TSjcltAkMlxC
+curl -i http://localhost:8098/buckets/s14805/keys/L5nSUAbyyZ8okL2TSjcltAkMlxC
 
 
 10.
 
-curl -XDELETE http://localhost:8098/buckets/s14805/index/new_bin/randomKey
+curl -XDELETE http://localhost:8098/buckets/s14805/keys/L5nSUAbyyZ8okL2TSjcltAkMlxC
+curl  -i http://localhost:8098/buckets/s14805/keys?keys=true
