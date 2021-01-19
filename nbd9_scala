@@ -1,0 +1,64 @@
+object Container {
+
+  def main(args: Array[String])= {
+
+    println("Zadanie 1")
+    val container = new Container2("2")
+    println(container.getContent)
+    val x = container.applyFunction(toInt)
+    println(x/2)
+    println("Zadanie 2")
+    val no = new No[String]
+    val yes = new Yes[String]("5")
+    println(no.isInstanceOf[Maybe[String]])
+    println(yes.isInstanceOf[Maybe[String]])
+    println("Zadanie 3 i 4")
+    println(no.applyFunction(toInt).getOrElse("getOrElseParam"))
+    println(yes.applyFunction(toInt).getOrElse("getOrElseParam"))
+  }
+
+
+  class Container2[A](private var _content: A) {
+
+    def getContent: A = _content
+
+    def applyFunction[R](x: A => R): R = {
+      x(_content)
+    }
+  }
+
+  def toInt(value: String): Int = {
+    try {
+      value.toInt
+    } catch {
+      case _: Exception => 0
+    }
+  }
+
+    trait Maybe[A] {
+
+      def applyFunction[R](f: A => R): Maybe[R]
+
+      def getOrElse[R >: A](default: R): R
+    }
+
+    class No[Nothing] extends Maybe[Nothing] {
+      override def applyFunction[R](f: Nothing => R): Maybe[R] = {
+        new No[R]
+      }
+
+      override def getOrElse[R >: Nothing](x: R): R = {x}
+    }
+
+    class Yes[A](private var _content: A) extends Maybe[A] {
+
+      override def applyFunction[R](f: A => R): Maybe[R] = {
+        new Yes[R](f(_content))
+      }
+
+      override def getOrElse[R >: A](d: R): R = {_content}
+    }
+
+
+
+}
