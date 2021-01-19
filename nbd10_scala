@@ -1,0 +1,19 @@
+object zad10 {
+
+  def dividers = for {
+    a <- Iterator.from(1)
+    b <- 1 to a
+    if a%b == 0
+  } yield(a,b)
+
+
+  def main(args: Array[String])= {
+
+    val pairs = dividers.buffered
+    println(pairs.next)
+    println(pairs.next)
+    println(pairs.next)
+    pairs drop 3 take 17 foreach println
+  }
+
+}
